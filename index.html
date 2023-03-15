@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./Asset/css/style.css">
+    <!-- -------------------fontawesome------------------------ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ---------------------Chart Js ------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="container ">
+
+    <div class="d-flex m-auto ">
+        <div class="px-2 vh-100 position-sticky top-0 py-4 bg-dark h-100 nav d-flex w-auto flex-column justify-content-between rounded-pill ">
+
+            <div>
+                <ul class="navbar-nav align-items-center  me-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item mb-5 ">
+                        <img class="logo" src="./Asset/images/icon/logo.png" alt="">
+                    </li>
+                    <li class="nav-item mb-4 p-3 active">
+                        <img src="./Asset/images/icon/home.png" alt="">
+                    </li>
+                    <li class="nav-item mb-4">
+                        <img src="./Asset/images/icon/bar1.png" alt="">
+                    </li>
+                    <li class="nav-item mb-4">
+                        <img src="./Asset/images/icon/card.png" alt="">
+                    </li>
+                    <li class="nav-item mb-4">
+                        <img src="./Asset/images/icon/list.png" alt="">
+                    </li>
+                    <li class="nav-item mb-4">
+                        <img src="./Asset/images/icon/time.png" alt="">
+                    </li>
+                    <li class="nav-item mb-4">
+                        <img src="./Asset/images/icon/arrow.png" alt="">
+                    </li>
+                    <li class="nav-item mb-4">
+                        <img src="./Asset/images/icon/message.png" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="mx-auto">
+                <img class="settings " src="./Asset/images/icon/settings.png" alt="">
+            </div>
+        </div>
+
+        <div class="p-4">
+            <header class="row">
+                <div class="col-md-9 ">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6>Welcome!</h6>
+                            <h5 class="c-primary">Dashboared</h5>
+                        </div>
+
+                        <div class="form-group has-search d-flex ">
+                            <span class="fa fa-search form-control-feedback"></span>
+                            <input type="text" class="form-control rounded-pill" placeholder="Search..">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 d-flex align-items-center justify-content-end">
+
+                    <div class="d-flex">
+                        <button type="button" class="btn wallet btn-outline rounded-pill">
+                            <i class="fa-solid fa-wallet"></i>
+                            Wallet</button>
+                        <div class="notifiacation ms-3">
+                            <i class="fa-solid  fa-bell border rounded-circle p-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="mt-4">
+                <div class="row">
+                    <div class="col-lg-9 col-md-12">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="px-3 pt-3 pb-2 bg-white card shadow h-100">
+                                    <div class="d-flex border-bottom pb-2">
+                                        <div class="col-8">
+                                            <p class="fw-bold mb-1">Balance</p>
+                                            <p class="mb-0 fw-bold fs-5">$14760.78</p>
+                                            <p class="small text-secondary mb-0"><small>6 April , 4PM </small> </p>
+                                        </div>
+                                        <div class="col-4">
+                                            <p class="mb-1 c-primary-light text-end">Wallet <span> <i
+                                                        class="fa-light fa-greater-than"></i></span></p>
+                                            <div>
+                                                <img class="w-100 h-100" src="./Asset/images/wave.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2 d-flex justify-content-between">
+                                        <p class="m-0"><i class="c-primary-light fa fa-arrow-trend-up"></i><small>
+                                                43.12% </small></p>
+                                        <p class="m-0"><small> $5562.21</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 ">
+                                <div class="px-3 pt-3 pb-2 bg-white card shadow h-100">
+                                    <div class="d-flex border-bottom pb-2">
+                                        <div class="col-7">
+                                            <p class="fw-bold mb-1">Saved Money</p>
+                                            <p class="mb-0 fw-bold fs-5">$17460.78</p>
+                                            <p class="small text-secondary mb-0"><small>6 April , 4PM </small> </p>
+                                        </div>
+                                        <div class="col-5">
+                                            <p class="mb-1 c-primary-light text-end">Savings <span> <i
+                                                        class="fa-light fa-greater-than"></i></span></p>
+                                            <div>
+                                                <img class="w-100 h-100" src="./Asset/images/wave.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mt-2 justify-content-between">
+                                        <p class="m-0"><i class="fa text-danger  fa-arrow-trend-down"></i><small> 3.12%
+                                            </small></p>
+                                        <p class="m-0"><small> -$1002.21</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 ">
+                                <div class="px-3 pt-3 pb-2 bg-white card shadow h-100">
+                                    <div class="d-flex border-bottom pb-2">
+                                        <div class="col-8">
+                                            <p class="fw-bold mb-1">Arrearages</p>
+                                            <p class="mb-0 fw-bold fs-5">$16760.78</p>
+                                            <p class="small text-secondary mb-0"><small>6 April , 4PM </small> </p>
+                                        </div>
+                                        <div class="col-4">
+                                            <p class="mb-1 c-primary-light text-end">Loan <span> <i
+                                                        class="fa-light fa-greater-than"></i></span></p>
+                                            <div>
+                                                <img class="w-100 h-100" src="./Asset/images/wave.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2 d-flex justify-content-between">
+                                        <p class="m-0"><i class="fa fa-arrow-trend-up c-primary-light"></i><small>
+                                                25.12% </small></p>
+                                        <p class="m-0"><small> $8762.21</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mt-3  ">
+                                <div class="px-3 pt-3 pb-2 bg-white card shadow h-100">
+                                    <div class="d-flex border-bottom pb-2">
+                                        <div class="col-8">
+                                            <p class="fw-bold mb-1">Transactions <span><i
+                                                        class="fa fa-chevron-down"></i></span></p>
+                                        </div>
+                                        <div class="col-4">
+                                            <p class="mb-1 c-primary-light text-end"><i
+                                                    class="fa fa-ellipsis-vertical"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2 d-flex justify-content-between">
+                                        <p class="mb-0"><small>Visa<span><i
+                                                        class="fa fa-chevron-down"></i></span></small></p>
+                                        <p class="mb-0"><small>Day</small></p>
+                                        <p class="active_tansaction mb-0 px-1 rounded-pill"><small>Week</small></p>
+                                        <p class="mb-0"><small>Month</small></p>
+                                        <p class="mb-0"><small>All</small></p>
+                                    </div>
+                                    <div class="mt-2 d-flex justify-content-between">
+                                        <div class="col-6 align-items-center d-flex">
+                                            <canvas id="myChart"></canvas>
+
+                                        </div>
+                                        <div class="col-6">
+                                            <div>
+                                                <p class="fs-5 mb-0 fw-bold c-primary-light">53.5%</p>
+                                                <p class="small mb-1 text-secondary">
+                                                    <small>Spend from the total balnance</small>
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p class="fs-5 mb-0 fw-bold c-primary-light">53.5%</p>
+                                                <p class="small mb-0 text-secondary">
+                                                    <small>Spend from the total balnance</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8 mt-3 ">
+                                <div class="px-3 pt-3 h-100 pb-2 bg-white card shadow">
+                                    <div class="d-flex border-bottom pb-2">
+                                        <div class="col-8 d-flex align-items-center">
+                                            <p class="fw-bold mb-1">Revanue</p>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="dropdown text-end">
+                                                <button class="btn c-primary-light dropdown-toggle" type="button"
+                                                    id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
+                                                    Dropdown button
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <canvas id="revanue"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mt-3 ">
+                                <div class="px-3 pt-3 pb-2 bg-white card shadow h-100">
+                                    <div class="d-flex border-bottom pb-2">
+                                        <div class="col-7 d-flex align-items-center">
+                                            <p class="fw-bold mb-1">Transaction History</p>
+                                        </div>
+                                        <div class="col-5">
+                                            <div class="dropdown text-end">
+                                                <button class="btn c-primary-light dropdown-toggle" type="button"
+                                                    id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
+                                                    Feb
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div
+                                        class="mt-2 d-flex justify-content-between align-items-center transaction_main">
+                                        <div class="transaction d-flex col-3 align-items-center">
+                                            <div class="">
+                                                <img class="w-100 h-100"
+                                                    src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEBUREhAQFRUVFRUVFRYVEBUXEBIXGBUXGBcXFRUYHSggGBolHRUVIjEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGi0dHR8wLS0tLS0tKy0rLS0rLS0rLS0tLS0tLSstKystLS0tLSstLS0tLS0tLS0tLS0rKy0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAAAQIDBAUGBwj/xABBEAACAQICBwQFCQcEAwAAAAAAAQIDEQQhBRIxQVFhcQaBkaEHEyKxwSMyM0JSYtHh8CRDcnOCkrIUFTTxU6LC/8QAGQEBAAMBAQAAAAAAAAAAAAAAAAECAwQF/8QAHxEBAAICAwEBAQEAAAAAAAAAAAECAxESITFBE3Fh/9oADAMBAAIRAxEAPwDycAHSgAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAoABmLgANAAAAAgCQQAJBAAkEAjYkFLmi3OullYrzhOpXgWY1uKyK1UQ51TxlWCEwW2qkEAkSQAAAAAAAASALQK9QFNJVAAugAIAAAAACAAABlmrSb2d7vs8DLjDardX52JnFLxt55+8wvZpEMeOGVs2yqdNLakVyqZ2XDLyMaU/14may8kuGVyqeHW0tQyL8ZkJWK8tVfghSq6xk1EnltfvMepQcWmtnuvsL0tqVbQqAB0sgAAAASBJBIAAAAAAAAEAAAAAAAIAroxuygyaTUYNva0+79WK3nUJhdUEoSW/ze1MwalbauLuWsRi7/rMxlJs55Xhf1iFt8iuFFvNIvQwzb2cCEqCbZF2WGefIRp22pkJUU2ZKaat4/ruMSTKoVbAXK9LVUe9eGzya8C0ZklrU5Pg792xmGdNJ3DO3oAC6oACQAAEgAAAAABAAAAAAQAAARV3Ypx8msuBkYN/KR6mPj/nNaqbbsm1nbuMsi0LeAwjm9jOo0boOPDxKtEYRRguhv8DCz2HHe7qpjhVg+z0fsrwNjDs1F56qv0NlgHsN7h0rGXKZbcYhyb7MR+yYmI7KQ+yeixoK1zExNFE7mCIrLyPS3Z7U2LLocpjsO4O+7jY9s0lo9STyPNu0ejtXWVstppS+2WTHruGh0TO8tXOzTT7y3ONm1wyGBk9eN7ZGRpOi41G90vaXxOvHPenLZiggk2UAAAABIEkEgAQAJIAAAAAACAAIAuYf5y8fBXIw0NbEdGV4ahKberFu0ZN23ZNbX1L+h88Qn91v3fiYZZaUh1WGhZG4wUIvY0+852pQp1J/KNuK2RvaK4t8WVVuz9B505zhL7s/gccxDriZd9g4G3oTSPJKWIxuHktXEOcVulm7d522i9KOpBN7d5Xjpblt21LERtZtFqtJM4jTOmalONqavLdfYc5GGOxH0uLnBPdB6vuHp49NqxTRxvanBpxb4FrA9k6NryxOJcuKrNMzq2FlGLpyqOpH6sn8+3CXHqVjqelp7jt5VGNqvebLHyvSjvsl4bLrmn7zH0jS1MTKL3ZrvRcxDahC6aacotNWeednwO2k9w4rR61hIkrMHUxAAAABIEkAACQBAAAAAgAABAAAuUlJ/MbTTTy62+KNh2epa1VvhFrzRiaPfyiXFP3X+BsuytlrvepNPkcubqXRj7iGPpmFRS9lStyKcJg8UtSVOU5Jp6yTzT53T4rduOzwuFjVdnZm1w/Z6KzSy5Now566a/ntzENE4hxj6zNuGtJqNlF5+y7ZX5rI3nYmk560X9VmTpOiqdN2y5/mXewMVrTfFlbTtetdSxdO4Kbm9VXscXj6mKj7Udde1qtJPXta+xrLhez+B6zUoqVSS45GvxXZScpX1m+D3+YpKb1/15j/AKzHU4xqScs5NKLXt2WxtZe7md1oSpUqUlKomnbeb3B9lErOpeVs7Sat4IvY5KKskrLwF7RPxFazH3bzTTmFf+4Q1YptwTz2ZN5mDpatUqxcqrUpvNtRS+045LkkvA6DHUJSx9OpF2Sgo9c5N+TOdr1rzrfdd10hK3uRfHPcKZK6r/WkJRNSNm1wdiEeg4gAAAAAABIkEAAAAAAIAMACAABXRnqyUlud+vI32Bqr1r1XFxnBar32isr9zZzsi3ojEONennlrJcvay+Jz5o21x209B0JV9q1zusNV9k8xwmI1ap2NDGvVSucVo7dtZjTW9rdI3fq4ZvezbdgsHO0nfal4v9M5btBg6rnr0rO6s0/eixoDTOJwycNSeb3RdrltdI3qz0HE1HTrPJvibnC6ZjNKxw+E/wBwqT1nTpqMt8m3JLjlkbl6PlSinfPeU8aTqXTV8RdbTmNK187FT0jZWZp8RibtyexJsekaiGJja8aMKlZp625vpaMI9Xt7zhcLPZLc9vR5SvzvcjH6Vq1pR9ZJtKMZKOxJvblvdsi1haqV4vc2ume3p/2b1rxc18nKejFRtLuz6rJ+4tGRjYWt0Mc7azuHJaNSAAsgAAAAEgAAAAAAAgACAAAAiX4mB6zVmpL6rTXc7mbUeRr6nzv1xMrrQ62rU9tSWx2a6M39WvJQUo55HGaLxGtDVe2GX9O7w2eB0WExN6erfYcdo06qW6XqGn5LJ0peDfuNzhe00EtWdONv4JJnOw1k7x2+TNzR0/JR1Z4dvZmlF7Nm3MrMOik1+t7DtrFKyp3WzKMl55ifaX12So1Ut7ayRrqWmXUVlSUOWqk/I2FJvVzyRSVrcfjExUzV6Zq6uHnnZztBcfbdn4K77jNrzzON0/pZVaupB3hTUs75Snkm+iV14l6RuWF7ahqajvPWtZNRXil8X5EuHtX+0nbqrX9zKK+UYre1Fvujb3yfgXt1/syuu9fjF+J0OaFSr60Emtl7cvy5ForqLLLY8/xKDop4zt6AAuqAAAACRIIAAAEAAABAAAAAW6xhVF7RsGjDrxs3z2dLfkZXhMMzs99JNcab8pRNrhq+qzWdmFetL+XL3xMqe05r+t6eOp0ZWi2rnWYKlSazseW0cU4vI2lDT04raZzVvW8PSZ0aSV1Y1WPxsYp5o5GWnasslcytHYOpWktdu3kU469W5b8bDCXqNzt7KTa52VzzLCvOK45eR7V/o1Gm4JfUl7meJU9q6Lzt+Jphne2WaNaZGPfzX9zV71KX5GThXdN8Vf3X8HYxcYrxvz11/VZSXc1H+4ydHq6sucf7tnnY2YwReViCWyDqiNQykABKAAAAAAABIAAgAABAAAAEgUtmNi1lrdx0OgOzGLxr/Z6MpR2OpL2aEes3t6Ru+R6HP0b08HhPXTar1lKOu3H5KlHP6OD3qWr7Tz4auZnktEQtWNzp592d0a6VKU5pqU1sazjHdfm9vgYtem03kdbjdhZwWDjUyaOHn9l1RT45JwNhgsE5bjqJaCgtiMrBYFR3FZyLRRr8DotZXR1WjMFqrZYjC4Y2tONkZWtttEaY0o+0eJdodGyw+KqU5KyzdN2spQd3G3TZ1TPb3tKsTo2nVjqVKUKik7KMoKV22slfZfLZmWxX4yplpyh4BRnf2d+dud9sb8/eZeCildN7cr8OB6h2t9CFSLdXR9RTW31FWVprlTq7JLcta3VnnekdHVsPP1WIo1KVThOLi5c1umuaO+sblxb6WK/zm+Ob5Pf538i2VTle3h1KTohmAAAAAAAAAAAAABBJXQoyqTUIQlOcsoxhFynLpFZsC2Dv9A+ibG17SrunhoPdL5St/ZF6q75X5Ho/Z70Y4DDWlKm69RZ69a0knxjTsoLra/MrN4hLxjs52NxuNs6NFqm/3tS8KNuKdrz/AKUz1fs16KcJQtPEftNT78bUF0pfW/qb6I9DhSSK1Ezm8yLFOiopRikklZJKyS4JbiitSummk4tNNNXTTyaa3oy7ESjcol5j2o7D1IXqYZOpTzbp7atP+H/yR/8AbrtOP0YtWbi8mnZp7U+DW5nvLg1+X4GBpDRGHxGdajCctmtmqq6TjaXdcxtj343rk1682hDImMUmdtU7GUv3darDlJRml5J+Zh1OwtRvLFw78O/hUMZw2bftVo6M80Zc3kbWh2GqKSbxcLcqD+Mzb0OytJW151J8soxfhn5kfjc/ekOUw9FyklFNt7EldvuOx0LoXUaqVEtZfNjtUObe9+42eEwdOmrU4Rj0Wb6va+8yDfHhivcsb5pt1AYek9GUcRTdKvRp1YP6s4KUeqvsfNGYDdg8j7T+hmnK88BV9W9vqarcqT5RqZyj363ceUac0FicHU9XiaE6T3OS9if8E17Mu5n1kWMZg6dWDp1acKkJZSjOKlB9YvJl4vMI0+Qwe7do/Q7hat54SpLDT26tnUw7/pb1o9zsuB5lp70faRwl3PDupBfvKDdSHfFJTj1cUuZeLRI5YBMFkIBIAgEgCAAwNhoHQ9XGYiGHopa0trfzYRXzpy5K/e2lvPonsh2Qw2ApatKN5tL1lWSXrKj5vcvurJdczlPRjoBYTD06s4/K13Gc7rOMX9HDuUrvm3wR6ZAxvbaYhUkGRcpuUSruSUJlSAqsGgiQIsHEqYAhRKlEIqAJE2BJIAAACCQIJAAiw1SQBx/bL0e4THxlLUjSxFvZrwjZt7vWxVlUXXPg0fPOmtE1sJXnh68NWpB574yW6UH9aL3P3NNH1q2cJ6V+yP8ArcG6tON8Th05wss6kNs6XO+bj95Liy9baQ+dwEwaoAABBsOz2CVfF0aTV4ymtZWycY+1JPqotd5rzpPR9H9s1vs05vvbiviyJ8HumDaqUpQ+ss48+hvMFW16cZ8VnyexrxOb0HJSy37VxNhozEuDnB7FK/TW/NM5124myhSKPXJgC8mXEWYF5BCtE2KUVoCCUABJJAAqBBJIAEgQSAAAAAMBgQGQmAPmT0laFWD0nWpRSUJtVqa4RqXbXJKamlySOYPWfT/hflcJWS2xrU2/4XCUf8pnkxvWelQAEik6n0e/8mf8t/5RIBW3g9g0F9JEz1/yan8H/wBIgGC7OwuwzYAAXYF4kAVIqQAQEgASAAJBIJEIkkAQSAAAAApZIAoiSwAPI/T99Dhf5tT/AAR40AbU8QgAFkP/2Q=="
+                                                    alt="">
+                                            </div>
+
+                                            <p class=" m-0 smal text-secondary ms-2"><small>Elnora Pena</small></p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p class="smal m-0  text-secondary"><small>Visa</small></p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p class="smal m-0  text-secondary"><small>7:30:35PM</small></p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p class="smal m-0  text-secondary"><small>$382.00</small></p>
+                                        </div>
+
+                                        <div class="transaction_status col-3 d-flex align-items-center">
+                                            <div class="bg-success">
+                                            </div>
+                                            <p class=" m-0 smal text-secondary ms-2"><small>Completed</small></p>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="mt-2 d-flex justify-content-between align-items-center transaction_main">
+                                        <div class="transaction d-flex col-3 align-items-center">
+                                            <div class="">
+                                                <img class="w-100 h-100"
+                                                    src="data:image/jpeg;base64,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"
+                                                    alt="">
+                                            </div>
+
+                                            <p class=" m-0 smal text-secondary ms-2"><small>Elnora Pena</small></p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p class="smal m-0  text-secondary"><small>Visa</small></p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p class="smal m-0  text-secondary"><small>7:30:35PM</small></p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p class="smal m-0  text-secondary"><small>$382.00</small></p>
+                                        </div>
+
+                                        <div class="transaction_status col-3 d-flex align-items-center">
+                                            <div class="bg-warning">
+                                            </div>
+                                            <p class=" m-0 smal text-secondary ms-2"><small>Pending</small></p>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="mt-2 d-flex justify-content-between align-items-center transaction_main">
+                                        <div class="transaction d-flex col-3 align-items-center">
+                                            <div class="">
+                                                <img class="w-100 h-100"
+                                                    src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEBUREhAQFRUVFRUVFRYVEBUXEBIXGBUXGBcXFRUYHSggGBolHRUVIjEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGi0dHR8wLS0tLS0tKy0rLS0rLS0rLS0tLS0tLSstKystLS0tLSstLS0tLS0tLS0tLS0rKy0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAAAQIDBAUGBwj/xABBEAACAQICBwQFCQcEAwAAAAAAAQIDEQQhBRIxQVFhcQaBkaEHEyKxwSMyM0JSYtHh8CRDcnOCkrIUFTTxU6LC/8QAGQEBAAMBAQAAAAAAAAAAAAAAAAECAwQF/8QAHxEBAAICAwEBAQEAAAAAAAAAAAECAxESITFBE3Fh/9oADAMBAAIRAxEAPwDycAHSgAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAoABmLgANAAAAAgCQQAJBAAkEAjYkFLmi3OullYrzhOpXgWY1uKyK1UQ51TxlWCEwW2qkEAkSQAAAAAAAASALQK9QFNJVAAugAIAAAAACAAABlmrSb2d7vs8DLjDardX52JnFLxt55+8wvZpEMeOGVs2yqdNLakVyqZ2XDLyMaU/14may8kuGVyqeHW0tQyL8ZkJWK8tVfghSq6xk1EnltfvMepQcWmtnuvsL0tqVbQqAB0sgAAAASBJBIAAAAAAAAEAAAAAAAIAroxuygyaTUYNva0+79WK3nUJhdUEoSW/ze1MwalbauLuWsRi7/rMxlJs55Xhf1iFt8iuFFvNIvQwzb2cCEqCbZF2WGefIRp22pkJUU2ZKaat4/ruMSTKoVbAXK9LVUe9eGzya8C0ZklrU5Pg792xmGdNJ3DO3oAC6oACQAAEgAAAAABAAAAAAQAAARV3Ypx8msuBkYN/KR6mPj/nNaqbbsm1nbuMsi0LeAwjm9jOo0boOPDxKtEYRRguhv8DCz2HHe7qpjhVg+z0fsrwNjDs1F56qv0NlgHsN7h0rGXKZbcYhyb7MR+yYmI7KQ+yeixoK1zExNFE7mCIrLyPS3Z7U2LLocpjsO4O+7jY9s0lo9STyPNu0ejtXWVstppS+2WTHruGh0TO8tXOzTT7y3ONm1wyGBk9eN7ZGRpOi41G90vaXxOvHPenLZiggk2UAAAABIEkEgAQAJIAAAAAACAAIAuYf5y8fBXIw0NbEdGV4ahKberFu0ZN23ZNbX1L+h88Qn91v3fiYZZaUh1WGhZG4wUIvY0+852pQp1J/KNuK2RvaK4t8WVVuz9B505zhL7s/gccxDriZd9g4G3oTSPJKWIxuHktXEOcVulm7d522i9KOpBN7d5Xjpblt21LERtZtFqtJM4jTOmalONqavLdfYc5GGOxH0uLnBPdB6vuHp49NqxTRxvanBpxb4FrA9k6NryxOJcuKrNMzq2FlGLpyqOpH6sn8+3CXHqVjqelp7jt5VGNqvebLHyvSjvsl4bLrmn7zH0jS1MTKL3ZrvRcxDahC6aacotNWeednwO2k9w4rR61hIkrMHUxAAAABIEkAACQBAAAAAgAABAAAuUlJ/MbTTTy62+KNh2epa1VvhFrzRiaPfyiXFP3X+BsuytlrvepNPkcubqXRj7iGPpmFRS9lStyKcJg8UtSVOU5Jp6yTzT53T4rduOzwuFjVdnZm1w/Z6KzSy5Now566a/ntzENE4hxj6zNuGtJqNlF5+y7ZX5rI3nYmk560X9VmTpOiqdN2y5/mXewMVrTfFlbTtetdSxdO4Kbm9VXscXj6mKj7Udde1qtJPXta+xrLhez+B6zUoqVSS45GvxXZScpX1m+D3+YpKb1/15j/AKzHU4xqScs5NKLXt2WxtZe7md1oSpUqUlKomnbeb3B9lErOpeVs7Sat4IvY5KKskrLwF7RPxFazH3bzTTmFf+4Q1YptwTz2ZN5mDpatUqxcqrUpvNtRS+045LkkvA6DHUJSx9OpF2Sgo9c5N+TOdr1rzrfdd10hK3uRfHPcKZK6r/WkJRNSNm1wdiEeg4gAAAAAABIkEAAAAAAIAMACAABXRnqyUlud+vI32Bqr1r1XFxnBar32isr9zZzsi3ojEONennlrJcvay+Jz5o21x209B0JV9q1zusNV9k8xwmI1ap2NDGvVSucVo7dtZjTW9rdI3fq4ZvezbdgsHO0nfal4v9M5btBg6rnr0rO6s0/eixoDTOJwycNSeb3RdrltdI3qz0HE1HTrPJvibnC6ZjNKxw+E/wBwqT1nTpqMt8m3JLjlkbl6PlSinfPeU8aTqXTV8RdbTmNK187FT0jZWZp8RibtyexJsekaiGJja8aMKlZp625vpaMI9Xt7zhcLPZLc9vR5SvzvcjH6Vq1pR9ZJtKMZKOxJvblvdsi1haqV4vc2ume3p/2b1rxc18nKejFRtLuz6rJ+4tGRjYWt0Mc7azuHJaNSAAsgAAAAEgAAAAAAAgACAAAAiX4mB6zVmpL6rTXc7mbUeRr6nzv1xMrrQ62rU9tSWx2a6M39WvJQUo55HGaLxGtDVe2GX9O7w2eB0WExN6erfYcdo06qW6XqGn5LJ0peDfuNzhe00EtWdONv4JJnOw1k7x2+TNzR0/JR1Z4dvZmlF7Nm3MrMOik1+t7DtrFKyp3WzKMl55ifaX12So1Ut7ayRrqWmXUVlSUOWqk/I2FJvVzyRSVrcfjExUzV6Zq6uHnnZztBcfbdn4K77jNrzzON0/pZVaupB3hTUs75Snkm+iV14l6RuWF7ahqajvPWtZNRXil8X5EuHtX+0nbqrX9zKK+UYre1Fvujb3yfgXt1/syuu9fjF+J0OaFSr60Emtl7cvy5ForqLLLY8/xKDop4zt6AAuqAAAACRIIAAAEAAABAAAAAW6xhVF7RsGjDrxs3z2dLfkZXhMMzs99JNcab8pRNrhq+qzWdmFetL+XL3xMqe05r+t6eOp0ZWi2rnWYKlSazseW0cU4vI2lDT04raZzVvW8PSZ0aSV1Y1WPxsYp5o5GWnasslcytHYOpWktdu3kU469W5b8bDCXqNzt7KTa52VzzLCvOK45eR7V/o1Gm4JfUl7meJU9q6Lzt+Jphne2WaNaZGPfzX9zV71KX5GThXdN8Vf3X8HYxcYrxvz11/VZSXc1H+4ydHq6sucf7tnnY2YwReViCWyDqiNQykABKAAAAAAABIAAgAABAAAAEgUtmNi1lrdx0OgOzGLxr/Z6MpR2OpL2aEes3t6Ru+R6HP0b08HhPXTar1lKOu3H5KlHP6OD3qWr7Tz4auZnktEQtWNzp592d0a6VKU5pqU1sazjHdfm9vgYtem03kdbjdhZwWDjUyaOHn9l1RT45JwNhgsE5bjqJaCgtiMrBYFR3FZyLRRr8DotZXR1WjMFqrZYjC4Y2tONkZWtttEaY0o+0eJdodGyw+KqU5KyzdN2spQd3G3TZ1TPb3tKsTo2nVjqVKUKik7KMoKV22slfZfLZmWxX4yplpyh4BRnf2d+dud9sb8/eZeCildN7cr8OB6h2t9CFSLdXR9RTW31FWVprlTq7JLcta3VnnekdHVsPP1WIo1KVThOLi5c1umuaO+sblxb6WK/zm+Ob5Pf538i2VTle3h1KTohmAAAAAAAAAAAAABBJXQoyqTUIQlOcsoxhFynLpFZsC2Dv9A+ibG17SrunhoPdL5St/ZF6q75X5Ho/Z70Y4DDWlKm69RZ69a0knxjTsoLra/MrN4hLxjs52NxuNs6NFqm/3tS8KNuKdrz/AKUz1fs16KcJQtPEftNT78bUF0pfW/qb6I9DhSSK1Ezm8yLFOiopRikklZJKyS4JbiitSummk4tNNNXTTyaa3oy7ESjcol5j2o7D1IXqYZOpTzbp7atP+H/yR/8AbrtOP0YtWbi8mnZp7U+DW5nvLg1+X4GBpDRGHxGdajCctmtmqq6TjaXdcxtj343rk1682hDImMUmdtU7GUv3darDlJRml5J+Zh1OwtRvLFw78O/hUMZw2bftVo6M80Zc3kbWh2GqKSbxcLcqD+Mzb0OytJW151J8soxfhn5kfjc/ekOUw9FyklFNt7EldvuOx0LoXUaqVEtZfNjtUObe9+42eEwdOmrU4Rj0Wb6va+8yDfHhivcsb5pt1AYek9GUcRTdKvRp1YP6s4KUeqvsfNGYDdg8j7T+hmnK88BV9W9vqarcqT5RqZyj363ceUac0FicHU9XiaE6T3OS9if8E17Mu5n1kWMZg6dWDp1acKkJZSjOKlB9YvJl4vMI0+Qwe7do/Q7hat54SpLDT26tnUw7/pb1o9zsuB5lp70faRwl3PDupBfvKDdSHfFJTj1cUuZeLRI5YBMFkIBIAgEgCAAwNhoHQ9XGYiGHopa0trfzYRXzpy5K/e2lvPonsh2Qw2ApatKN5tL1lWSXrKj5vcvurJdczlPRjoBYTD06s4/K13Gc7rOMX9HDuUrvm3wR6ZAxvbaYhUkGRcpuUSruSUJlSAqsGgiQIsHEqYAhRKlEIqAJE2BJIAAACCQIJAAiw1SQBx/bL0e4THxlLUjSxFvZrwjZt7vWxVlUXXPg0fPOmtE1sJXnh68NWpB574yW6UH9aL3P3NNH1q2cJ6V+yP8ArcG6tON8Th05wss6kNs6XO+bj95Liy9baQ+dwEwaoAABBsOz2CVfF0aTV4ymtZWycY+1JPqotd5rzpPR9H9s1vs05vvbiviyJ8HumDaqUpQ+ss48+hvMFW16cZ8VnyexrxOb0HJSy37VxNhozEuDnB7FK/TW/NM5124myhSKPXJgC8mXEWYF5BCtE2KUVoCCUABJJAAqBBJIAEgQSAAAAAMBgQGQmAPmT0laFWD0nWpRSUJtVqa4RqXbXJKamlySOYPWfT/hflcJWS2xrU2/4XCUf8pnkxvWelQAEik6n0e/8mf8t/5RIBW3g9g0F9JEz1/yan8H/wBIgGC7OwuwzYAAXYF4kAVIqQAQEgASAAJBIJEIkkAQSAAAAApZIAoiSwAPI/T99Dhf5tT/AAR40AbU8QgAFkP/2Q=="
+                                                    alt="">
+                                            </div>
+
+                                            <p class=" m-0 smal text-secondary ms-2"><small>Elnora Pena</small></p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p class="smal m-0  text-secondary"><small>Visa</small></p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p class="smal m-0  text-secondary"><small>7:30:35PM</small></p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p class="smal m-0  text-secondary"><small>$382.00</small></p>
+                                        </div>
+
+                                        <div class="transaction_status col-3 d-flex align-items-center">
+                                            <div class="bg-danger">
+                                            </div>
+                                            <p class=" m-0 smal text-secondary ms-2"><small>Failed</small></p>
+                                        </div>
+                                    </div>
+
+
+                                    <div
+                                        class="mt-2 d-flex justify-content-between align-items-center transaction_main">
+                                        <div class="transaction d-flex col-3 align-items-center">
+                                            <div class="">
+                                                <img class="w-100 h-100"
+                                                    src="data:image/jpeg;base64,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"
+                                                    alt="">
+                                            </div>
+
+                                            <p class=" m-0 smal text-secondary ms-2"><small>Elnora Pena</small></p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p class="smal m-0  text-secondary"><small>Visa</small></p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p class="smal m-0  text-secondary"><small>7:30:35PM</small></p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p class="smal m-0  text-secondary"><small>$382.00</small></p>
+                                        </div>
+
+                                        <div class="transaction_status col-3 d-flex align-items-center">
+                                            <div class="bg-success">
+                                            </div>
+                                            <p class=" m-0 smal text-secondary ms-2"><small>Completed</small></p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-5 mt-3  ">
+                                <div class="px-3 pt-3 pb-2 bg-white card shadow h-100">
+                                    <div class="d-flex border-bottom pb-2">
+                                        <div class="col-7 d-flex align-items-center">
+                                            <p class="fw-bold mb-1 mb-0">Expenses</p>
+                                        </div>
+                                        <div class="col-5">
+                                            <div class="dropdown text-end">
+                                                <button class="btn c-primary-light dropdown-toggle" type="button"
+                                                    id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
+                                                    Last Days
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2 d-flex justify-content-between">
+                                        <canvas id="expense"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3  col-md-12">
+                        <div class="col-lg-12 right col-md-4 pb-4">
+                            <div class="p-4 user_profile bg-white card shadow">
+                                <div class="mx-auto">
+                                    <img class="h-100 w-100"
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU4isIlWxOex2qVPSF3mvsmsByxC0Mq0U8M_UrwRFPUkSvbbg5geYOxfT--ZfOmlu-Om0"
+                                        alt="">
+                                    <i class="fa position-absolute  c-primary-light fa-ellipsis-vertical"></i>
+                                </div>
+                                <p class="text-center fw-bold mt-3 mb-0">Emily Blund</p>
+                                <p class="text-center small text-secondary mb-0"><small>Friday, 6 April 2022</small></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 right col-md-4 pb-2 text-white">
+                            <div class="p-3 visacard card shadow">
+                                <p class="m-0 small"><Small>BALANCE</Small></p>
+                                <p class="m-0 fs-6 opacity-90 fw-bold">$83,547.89</p>
+                                <p class="m-0 ">4555 4889 4777 5565</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <p class="m-0 small"><small>VALID THRU</small> </p>
+                                        <p class="m-0 small opacity-90"><small>12/25</small> </p>
+                                    </div>
+                                    <div>
+                                        <i class="fa-brands fs-3 fa-cc-visa"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="shadow_visa"></div>
+                            <div class="card shadow mt-2">
+                                <p class="text-dark mb-0  py-2 text-center">Add Card <i class="fa-light fa-plus"></i>
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-12 right col-md-4 pb-4">
+                            <div class="p-4 bg-white card shadow">
+                                <div class="d-flex border-bottom pb-2">
+                                    <div class="col-6 d-flex align-items-center">
+                                        <p class="fw-bold mb-1 mb-0">Goals</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="dropdown text-end">
+                                            <button class="btn c-primary-light dropdown-toggle" type="button"
+                                                id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                Add Goals
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div >
+                                    <div class="d-flex justify-content-between mt-2">
+                                        <p class="m-0 small fw-bold">Trip</p>
+                                        <div class="d-flex">
+                                            <p class="small m-0"><span class="c-primary-light">$1152</span> /<span>$2500</span></p>
+                                            <i class="fa ms-2 c-primary-light fa-ellipsis-vertical"></i>
+
+                                        </div>
+                                    </div>
+                                    <div class="progress" role="progressbar" aria-label="Basic example"
+                                        aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 40%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-1">
+                                    <div class="d-flex justify-content-between mt-2">
+                                        <p class="m-0 small fw-bold">Car</p>
+                                        <div class="d-flex">
+                                            <p class="small m-0"><span class="c-primary-light">$1152</span> /<span>$2500</span></p>
+                                            <i class="fa ms-2 c-primary-light fa-ellipsis-vertical"></i>
+
+                                        </div>
+                                    </div>
+                                    <div class="progress" role="progressbar" aria-label="Basic example"
+                                        aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 40%"></div>
+                                    </div>
+                                </div>
+
+
+                                <div class="mt-1">
+                                    <div class="d-flex justify-content-between mt-2">
+                                        <p class="m-0 small fw-bold">Airpod Max</p>
+                                        <div class="d-flex">
+                                            <p class="small m-0"><span class="c-primary-light">$1152</span> /<span>$2500</span></p>
+                                            <i class="fa ms-2 c-primary-light fa-ellipsis-vertical"></i>
+
+                                        </div>
+                                    </div>
+                                    <div class="progress" role="progressbar" aria-label="Basic example"
+                                        aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 40%"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+</body>
+
+</html>
